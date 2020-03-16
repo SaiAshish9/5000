@@ -2,8 +2,12 @@ import React,{useState} from 'react'
 
 import {View,Text,Dimensions,Image,TouchableOpacity} from 'react-native'
 
-import {FontAwesome5} from '@expo/vector-icons'
+// import {FontAwesome5} from '@expo/vector-icons'
 
+
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
+
+import {faArrowRight,faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 
 import {Navbar} from './navbar'
 
@@ -42,7 +46,7 @@ HAUNTINGS SO FAR
 <View style={{width:width,height:height*0.4,marginTop:40,position:'absolute',left:0,right:0,top:40}}>
 
 
-<Swipe/>
+<Swipe navigation={navigation}/>
 
 </View>
 
@@ -55,12 +59,12 @@ HAUNTINGS SO FAR
 
  {
 selectedRight?
-(<Text style={{color:'white',fontWeight:'bold'}}>
-    Jay,the founder and CEO of the Paranormal Company is a paranormal researcher and investigator
+(<Text style={{color:'white',fontWeight:'bold',textAlign:'center'}}>
+Jay, the founder and CEO of The Paranormal Company is a paranormal researcher and investigator. A writer and TedX speaker, Jay has dedicated his career towards exploring the unknown and educating the masses about paranormal reality. 
 </Text>):(
-<Text style={{color:'white',fontWeight:'bold',alignItems:'center',justifyContent:'center'}}>
+<Text style={{color:'white',fontWeight:'bold',alignItems:'center',justifyContent:'center',textAlign:'center'}}>
 
-Being a pioneer in the field of Paranormal Investigation in India,Jay has an array of accolades to his name.
+Being a pioneer in the field of Paranormal Investigation in India, Jay has an array of accolades to his name. He is the official representative of 14 international paranormal research troops including the prestigious Piedmont-Triad Paranormal Investigations and Grey Wolf Paranormal Networking.
 
 </Text>
 )
@@ -73,14 +77,14 @@ selectedRight?
 (
     <TouchableOpacity 
     onPress={()=>setSelectedRight(false)}
-    style={{height:25,width:25,position:'absolute',left:width*0.35,top:height*0.805}}>
-<FontAwesome5  color={'white'} name='arrow-left'  size={15}  />
+    style={{height:25,width:25,position:'absolute',left:width*0.35,top:height*0.863}}>
+<FontAwesomeIcon  color={'white'} icon={faArrowLeft}  size={15}  />
 </TouchableOpacity>
 ):(
     <TouchableOpacity 
     onPress={()=>setSelectedRight(true)}
-    style={{justifyContent:'center',alignItems:'center',borderRadius:50,height:25,width:25,position:'absolute',left:width*0.35,top:height*0.799,backgroundColor:'white'}}>
-<FontAwesome5  color={'black'} name='arrow-left'  size={12}  />
+    style={{justifyContent:'center',alignItems:'center',borderRadius:50,height:25,width:25,position:'absolute',left:width*0.35,top:height*0.855,backgroundColor:'white'}}>
+<FontAwesomeIcon  color={'black'} icon={faArrowLeft}  size={12}  />
 </TouchableOpacity>
 )
 }
@@ -90,14 +94,14 @@ selectedRight?
 (
 <TouchableOpacity 
     onPress={()=>setSelectedRight(false)}
-    style={{borderRadius:50,height:25,width:25, position:'absolute',left:width*0.55,justifyContent:'center',alignItems:'center',top:height*0.799,backgroundColor:'white'}} >
-<FontAwesome5  color={'black'} name='arrow-right'  size={12}  />
+    style={{borderRadius:50,height:25,width:25, position:'absolute',left:width*0.58,justifyContent:'center',alignItems:'center',top:height*0.855,backgroundColor:'white'}} >
+<FontAwesomeIcon  color={'black'} icon={faArrowRight}  size={15}  />
 </TouchableOpacity>
 ):(
     <TouchableOpacity 
     onPress={()=>setSelectedRight(true)}
-    style={{ height:25,width:25, position:'absolute',left:width*0.55,top:height*0.805}} >
-<FontAwesome5  color={'white'} name='arrow-right'  size={15}  />
+    style={{ height:25,width:25, position:'absolute',left:width*0.58,top:height*0.862}} >
+<FontAwesomeIcon  color={'white'} icon={faArrowRight}  size={12}  />
 </TouchableOpacity>
 )
 }

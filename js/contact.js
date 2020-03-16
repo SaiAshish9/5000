@@ -1,7 +1,7 @@
 import React,{Component,useState,useEffect} from 'react'
 
 
-import {View,Text,Image,TextInput,Dimensions,TouchableOpacity} from 'react-native'
+import {Linking,View,Text,Image,TextInput,Dimensions,TouchableOpacity} from 'react-native'
 
 const {width,height}=Dimensions.get("window")
 
@@ -75,7 +75,7 @@ export const Contact=({navigation})=>{
             <Image source= {require('../kits/contact.jpg')} style={{position:'absolute',height:height,zIndex:-1,width: width*1,bottom:0,top:0,right:-40,left:0,opacity:0.12}} resizeMode={'cover'} />
 
 
-          <Text style={{color:'white',fontSize:20,fontWeight:'bold',marginTop:5}}>
+          <Text style={{color:'white',fontSize:20,fontWeight:'bold',marginTop:-18}}>
 Get in touch
 
           </Text>
@@ -146,7 +146,12 @@ style={{color:'white',marginTop:15,marginBottom:5,borderRadius:10,height:40,widt
 <View style={{flexDirection:'row'}}>
 
 <View>
-<TouchableOpacity style={{margin:5}}  >
+<TouchableOpacity style={{margin:5}} 
+onPress={()=>{
+  Linking.openURL('https://www.linkedin.com/in/ijayalani')
+}}
+
+>
 <Text style={{color:'white',fontWeight:'bold',margin:5}}>
   Linkedin
 </Text>
@@ -155,7 +160,13 @@ style={{color:'white',marginTop:15,marginBottom:5,borderRadius:10,height:40,widt
 
 
 <View>
-<TouchableOpacity style={{margin:5}} >
+<TouchableOpacity style={{margin:5}}
+
+onPress={()=>{
+  Linking.openURL('https://twitter.com/ijayalani?s=09')
+}}
+
+>
 <Text style={{color:'white',fontWeight:'bold',margin:5}}>
 Twitter  
 </Text>
@@ -163,7 +174,13 @@ Twitter
 </View>
 
 <View>
-<TouchableOpacity style={{margin:5}} >
+<TouchableOpacity style={{margin:5}} 
+
+onPress={()=>{
+  Linking.openURL('https://instagram.com/ijayalani')
+}}
+
+>
 <Text style={{color:'white',fontWeight:'bold',margin:5}}>
 Instagram  
 </Text>
@@ -171,7 +188,14 @@ Instagram
 </View>
 
 <View>
-<TouchableOpacity style={{margin:5}} >
+<TouchableOpacity style={{margin:5}}
+
+onPress={()=>{
+  Linking.openURL('https://m.facebook.com/Theparanormalboy/')
+}}
+
+
+>
 <Text style={{color:'white',fontWeight:'bold',margin:5}}>
 Facebook
 </Text>

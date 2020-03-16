@@ -11,14 +11,24 @@ import {About} from './js/about'
 
 import {Work} from './js/work'
 
+import {Tedx} from './js/tedx'
+
 import Video from './js/videos'
 
 import {Contact} from './js/contact'
 
 import {Podcast} from './js/podcast'
 
+import {Media} from './js/media'
 
-import {FontAwesome5} from '@expo/vector-icons'
+
+import {faHeadphones,faLink,faMicrophone,faVideo,faPlaceOfWorship,faPhone,faHome,faInfoCircle} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
+
+// import {FontAwesome5} from '@expo/vector-icons'
+
+
+
 
 const {width,height} = Dimensions.get('window')
 
@@ -73,13 +83,22 @@ export default function App() {
       inactiveTintColor:'white',
     activeBackgroundColor:'black',
     itemStyle:{
-      margin:20,
-        }
+      margin:10,
+      width:'100%',
+    
+      marginRight:'130%',
+      height:90 ,
+      marginTop:0
+           },
+           labelStyle:{
+       position:'absolute',
+left:-15
+      }
     }}
     
     drawerStyle={{
     backgroundColor:'white',
-    // width:width*0.4,
+    width:width*0.6,
     color:'white',
     borderRightColor:'white',
     borderWidth:1
@@ -91,56 +110,106 @@ export default function App() {
 
 <Drawer.Screen
   name="home"
-  options={{drawerIcon:({focused})=>{
-    return  <FontAwesome5 name='home' color={focused?'red':'white'}  size={12}  />
+  options={{
+drawerLabel:'Home',
+drawerIcon:({focused})=>{
+  return  <FontAwesomeIcon icon={faHome} color={focused?'red':'white'} size={15} style={{position:'absolute', left:0,top:14}} />
 }
+
   }
   }
   component={Main}/>
 
+ 
 
 <Drawer.Screen
   name="about"
-  options={{drawerIcon:({focused})=>{
-    return  <FontAwesome5 name='info-circle' color={focused?'red':'white'}  size={12}  />
-  }  
+  options={{
+    drawerIcon:({focused})=>{
+      return  <FontAwesomeIcon icon={faInfoCircle} color={focused?'red':'white'} size={15} style={{position:'absolute', left:0,top:14}}  />
+    }  , 
+  drawerLabel:'about'
+
   }}
   component={About}/>
 
 
+
 <Drawer.Screen
   name="work"
-  options={{drawerIcon:({focused})=>{
-    return  <FontAwesome5 name='place-of-worship' color={focused?'red':'white'}  size={12}  />
-  }  
+  options={{
+    drawerIcon:({focused})=>{
+      return  <FontAwesomeIcon icon={faPlaceOfWorship} color={focused?'red':'white'} size={15} style={{position:'absolute', left:0,top:14}} />
+    },
+  drawerLabel:'Work'
+
   }}
   component={Work}/>
 
+  
 
 <Drawer.Screen
   name="latest videos"
-  options={{drawerIcon:({focused})=>{
-    return  <FontAwesome5 name='video' color={focused?'red':'white'}  size={12}  />
-  }  
+  options={{
+    drawerIcon:({focused})=>{
+      return  <FontAwesomeIcon icon={faVideo} color={focused?'red':'white'} size={15} style={{position:'absolute', left:0,top:14}}  />
+    }  , 
+  
+  drawerLabel:'Latest Videos'
+
   }}
   component={Video}/>
 
+
 <Drawer.Screen
   name="podcast"
-  options={{drawerIcon:({focused})=>{
-    return  <FontAwesome5 name='headphones' color={focused?'red':'white'}  size={12}  />
-  }  
+  options={{
+    drawerIcon:({focused})=>{
+      return  <FontAwesomeIcon icon={faHeadphones} color={focused?'red':'white'} size={15} style={{position:'absolute', left:0,top:14}}/>
+    }  ,
+  drawerLabel:'Podcast'
+
   }}
   component={Podcast}/>
 
+ 
 
 <Drawer.Screen
   name="contact"
-  options={{drawerIcon:({focused})=>{
-    return  <FontAwesome5 name='phone' color={focused?'red':'white'}  size={12}  />
-  }  
+  options={{
+     drawerIcon:({focused})=>{
+    return  <FontAwesomeIcon icon={faPhone} color={focused?'red':'white'} size={15}  style={{position:'absolute', left:0,top:14}} />
+  }  ,
+  drawerLabel:'Contact'
   }}
   component={Contact}/>
+
+<Drawer.Screen
+  name="tedx"
+  options={{
+     drawerIcon:({focused})=>{
+    return  <FontAwesomeIcon icon={faMicrophone} color={focused?'red':'white'}  size={15} style={{position:'absolute', left:0,top:14}} />
+  }, 
+  drawerLabel:'Tedx talks'
+  
+  }
+
+}
+  component={Tedx}/>
+
+
+<Drawer.Screen
+  name="media"
+  options={{
+     drawerIcon:({focused})=>{
+    return  <FontAwesomeIcon icon={faLink} color={focused?'red':'white'}  size={15} style={{position:'absolute', left:0,top:14}} />
+  }, 
+  drawerLabel:'media links'
+  
+  }
+
+}
+  component={Media}/>
 
 
     </Drawer.Navigator>

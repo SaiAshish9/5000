@@ -45,10 +45,13 @@ showsButtons={false} autoplay={true}
 >
 
 
+
+
+
 <View style={{width:width,alignItems:'center',justifyContent:'center',height:height}}>
 
 <TouchableOpacity style={{width:90,height:90,borderRadius:200,position:'absolute',top:30,zIndex:1,borderColor:'white',borderWidth:3}}>
-<Image source={Pic1} resizeMode="contain" style={{width:84,height:84,borderRadius:200,position:'absolute'}} />
+<Image source={require('../kits/omkar.jpeg')} resizeMode="contain" style={{width:84,height:84,borderRadius:200,position:'absolute'}} />
 </TouchableOpacity>
 
 <View  style={{padding:10,alignItems:'center',justifyContent:'center',width:width*0.7,height:height*0.7}}>
@@ -61,31 +64,89 @@ showsButtons={false} autoplay={true}
 I always thought that paranormal experts look scary like 'Taantriks' but that wasn't the case with Jay. Apart from being a great paranormal expert he is also a very good story teller. He is well aware of the three important aspects of story writing: beginning-middle-end. It's very difficult to believe that such a calm and composed person has had so many encounters and has been to almost more than 130 haunted places in India. I think it's high time that we update our 'Bhooton Ki Kahaniyaan' with reality and Jay is going to make a major contribution to that.
 </Text>
 
+
+<Text style={{color:'white',marginTop:40,marginRight:width*0.46}}>
+    Hungama
+
+</Text>
+
 </View>
 
 </View>
+
+
+
+
+
+
+
 
 <View style={{width:width,alignItems:'center',justifyContent:'center',height:height}}>
 
 
 
 <TouchableOpacity style={{width:90,height:90,borderRadius:200,position:'absolute',top:30,zIndex:1,borderColor:'white',borderWidth:3}}>
-<Image source={Pic2} resizeMode="contain" style={{width:84,height:84,borderRadius:200,position:'absolute'}} />
+<Image source={require('../kits/neil.jpeg')} resizeMode="contain" style={{width:84,height:84,borderRadius:200,position:'absolute'}} />
 </TouchableOpacity>
 
 <View  style={{padding:10,alignItems:'center',justifyContent:'center',width:width*0.7,height:height*0.7}}>
     
 <Text style={{color:'white',fontWeight:'bold',marginTop:70}}>
-    Jay Alani
+Neil D'Silva
 </Text>
 
 <Text style={{color:'white',marginTop:30}}>
-I always thought that paranormal experts look scary like 'Taantriks' but that wasn't the case with Jay. 
+Jay is a paranormal investigator with a difference—a much-needed difference. Having collaborated on a bestselling book with him, I know that he's not the stereotypical ghostbuster who goes around poking dark places with devices. Instead, he has an almost philanthropic view of throwing light on the unknown, or 'paranormal reality' as he calls it. My best wishes to Jay in this lofty mission he has undertaken, of ridding our society of blind faith and superstitions.
+
+</Text>
+<Text style={{color:'white',marginTop:40,marginRight:width*0.31}}>
+By-Neil D'Silva
+Author
 </Text>
 
 </View>
 
 </View>
+
+
+
+
+
+
+
+
+
+<View style={{width:width,alignItems:'center',justifyContent:'center',height:height}}>
+
+
+
+<TouchableOpacity style={{width:90,height:90,borderRadius:200,position:'absolute',top:30,zIndex:1,borderColor:'white',borderWidth:3}}>
+<Image source={require('../kits/suhail.jpeg')} resizeMode="contain" style={{width:84,height:84,borderRadius:200,position:'absolute'}} />
+</TouchableOpacity>
+
+<View  style={{padding:10,alignItems:'center',justifyContent:'center',width:width*0.7,height:height*0.7}}>
+    
+<Text style={{color:'white',fontWeight:'bold',marginTop:70}}>
+Suhail Mathur
+</Text>
+
+<Text style={{color:'white',marginTop:30}}>
+One of India's premier paranormal experts, Jay's zest and unwavering dedication to explore the unknown and uncover myths & superstitions plaguing the country, is highly commendable.</Text>
+
+
+
+<Text style={{color:'white',marginTop:40,marginRight:width*0.21}}>
+Director,The Book Bakers
+</Text>
+
+</View>
+
+</View>
+
+
+
+
+
 
 
 

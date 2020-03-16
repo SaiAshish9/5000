@@ -34,9 +34,9 @@ style={{backgroundColor:'black',borderLeftColor:'white',borderWidth:1}}
 <Navbar navigation={navigation}/>
 
 
-<Text style={{fontSize:30,color:'white',fontWeight:'bold',marginTop:90}}>
+<Text style={{fontSize:30,color:'white',fontWeight:'bold',marginTop:110}}>
 
-<AnimateNumber initial={1} timing="linear" countBy={1} value={100} size={30} style={{color:'white'}}/>
+<AnimateNumber initial={1} timing="linear" countBy={1} value={100} size={30} style={{color:'white'}}/> +
     {/* {this.state.x}  + */}
 </Text>
 
@@ -51,7 +51,7 @@ style={{backgroundColor:'black',borderLeftColor:'white',borderWidth:1}}
 </Text>
 
 <Text style={{fontSize:30,color:'white',fontWeight:'bold'}}>
-<AnimateNumber initial={1} timing="linear" countBy={1} value={150} size={30} style={{color:'white'}}/>
+<AnimateNumber initial={1} timing="linear" countBy={1} value={150} size={30} style={{color:'white'}}/> +
     {/* {this.state.y}  + */}
 </Text>
 
@@ -60,7 +60,7 @@ style={{backgroundColor:'black',borderLeftColor:'white',borderWidth:1}}
 </Text>
 
 <Text style={{fontSize:30,color:'white',fontWeight:'bold'}}>
-<AnimateNumber initial={1} timing="linear" countBy={1} value={50} size={30} style={{color:'white'}}/>
+<AnimateNumber initial={1} timing="linear" countBy={1} value={50} size={30} style={{color:'white'}}/> +
  {/* {this.state.z}  + */}
 </Text>
 
@@ -70,7 +70,7 @@ style={{backgroundColor:'black',borderLeftColor:'white',borderWidth:1}}
 
 
 <Text style={{fontSize:30,color:'white',fontWeight:'bold'}}>
-<AnimateNumber initial={1} timing="linear" countBy={1} value={10} size={30} style={{color:'white'}}/>
+<AnimateNumber initial={1} timing="linear" countBy={1} value={10} size={30} style={{color:'white'}}/> M+
  {/* {this.state.t}  M+ */}
 </Text>
 

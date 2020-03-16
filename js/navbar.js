@@ -2,7 +2,16 @@ import React,{useEffect,useState} from 'react'
 
 import {Dimensions,Image,View,TouchableOpacity} from 'react-native'
 
-import {FontAwesome5} from '@expo/vector-icons'
+// import {FontAwesome5} from '@expo/vector-icons'
+
+
+
+import {faBars,faTimes} from '@fortawesome/free-solid-svg-icons'
+
+
+
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
+
 
 const {width, height} = Dimensions.get('window')
 
@@ -57,16 +66,15 @@ return (
                       {
                         !check?(
 
-                 <FontAwesome5
-                 color={'white'} name='bars'  size={17}  /> 
+                          <FontAwesomeIcon 
+                          color={'white'} icon={faBars}  size={17}  />
                    
 
                       )
                       :
                       (
- 
-                        <FontAwesome5
-                        color={'white'} name='times'  size={17}  />
+                        <FontAwesomeIcon 
+                        color={'white'} icon={faTimes}  size={17}  />
                     )
                         
                     }

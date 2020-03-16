@@ -6,9 +6,11 @@ import {Animated,View,Text,Image,TouchableOpacity} from 'react-native'
 import {Dimensions} from 'react-native'
 
 
-import {FontAwesome5} from '@expo/vector-icons'
+// import {FontAwesome5} from '@expo/vector-icons'
 
+import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
 
 
 const {width,height}=Dimensions.get("window")
@@ -57,7 +59,7 @@ clearInterval(this.display)
     }
 
     toggle(){
-const title="I'm a Designer"
+const title="The Paranormal Boy"
 const x=title.split()
 if(this.state.title.length!=title.length){
   this.setState({
@@ -104,7 +106,7 @@ if(this.state.title.length!=title.length){
         }}
         >
 
-<Text style={{color:'white',fontWeight:'bold',fontSize:20,marginTop:height*0.68,marginLeft:width*0.1}}>
+<Text style={{color:'white',fontWeight:'bold',fontSize:13,marginTop:height*0.68,marginLeft:width*0.1}}>
         
         {
          this.state.title
@@ -119,10 +121,10 @@ if(this.state.title.length!=title.length){
                      </Text>
 
 
-        <Text style={{marginTop:10,fontSize:12,marginLeft:width*0.1,color:'white'}}>
+        <Text style={{fontWeight:'bold',marginTop:20,fontSize:20,marginLeft:width*0.1,color:'white'}}>
                     
-                    I'm a Designer with extensive experience for over 3 years
-                    
+                    {/* I'm a Designer with extensive experience for over 3 years */}
+Jay Alani                    
                       </Text>
                       </Animated.View>
 
@@ -139,7 +141,7 @@ if(this.state.title.length!=title.length){
         }}
         >
                     <Text style={{marginTop:30,marginLeft:width*0.1,marginRight:16,color:'white',fontWeight:'bold'}}> 
-                    Get in my world
+                    Get into my world
                     </Text>
 
 
@@ -152,7 +154,7 @@ this.props.navigation.jumpTo('about')
        }
        
        style={{height:30,width:30,marginLeft:160,marginTop:-23,backgroundColor:'white',borderRadius:50,alignItems:'center',justifyContent:'center'}}>
-       <FontAwesome5 name='arrow-right' color={'black'} size={12}  />
+       <FontAwesomeIcon icon={faArrowRight} color={'black'} size={12}  />
        </TouchableOpacity>
 
                     </Animated.View>
